@@ -9,8 +9,18 @@ from tqdm import tqdm
 from utils import read_jsonl, write_jsonl, normalize_text, abstain_score, clamp_score
 
 
+def _resolve_model_path(model_path: str) -> str:
+    if os.path.exists(model_path):
+        return model_path
+    raise FileNotFoundError(
+        f"Model file not found: {model_path}. "
+        "Pass an explicit valid path."
+    )
+
+
 def load_tfidf(model_path: str):
-    obj = joblib.load(model_path)
+    resolved = _resolve_model_path(model_path)
+    obj = joblib.load(resolved)
     return obj["pipeline"], obj["normalized"]
 
 
@@ -23,6 +33,12 @@ def tfidf_predict_one(pipeline, normalized: bool, text: str) -> float:
 
 class DebertaPredictor:
     def __init__(self, model_dir: str, device: str = None):
+        if not os.path.isdir(model_dir):
+            raise FileNotFoundError(
+                f"Model directory not found: {model_dir}. "
+                "Pass an explicit valid directory."
+            )
+
         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")

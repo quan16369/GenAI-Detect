@@ -43,7 +43,12 @@ class TextDataset(Dataset):
             if self.normalized:
                 text = normalize_text(text)
 
-            label = int(r["label"])
+            try:
+                label = int(r["label"])
+            except (TypeError, ValueError):
+                continue
+            if label not in (0, 1):
+                continue
             self.examples.append(Example(text=text, label=label))
 
     def __len__(self):
@@ -71,7 +76,15 @@ def evaluate(model, loader, device):
     with torch.no_grad():
         for batch in loader:
             batch = {k: v.to(device) for k, v in batch.items()}
-            outputs = model(**batch)
+            model_inputs = {
+                "input_ids": batch["input_ids"],
+                "attention_mask": batch["attention_mask"],
+                "labels": batch["labels"],
+            }
+            if "token_type_ids" in batch:
+                model_inputs["token_type_ids"] = batch["token_type_ids"]
+
+            outputs = model(**model_inputs)
             logits = outputs.logits
             p = torch.softmax(logits, dim=-1)[:, 1].detach().cpu().numpy()
             y = batch["labels"].detach().cpu().numpy()
@@ -95,13 +108,23 @@ def main():
     parser.add_argument("--max_length", type=int, default=256)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--epochs", type=int, default=1)
-    parser.add_argument("--lr", type=float, default=1e-5)
+    parser.add_argument("--lr", type=float, default=2e-6)
+    parser.add_argument("--weight_decay", type=float, default=0.01)
     parser.add_argument("--normalized", action="store_true")
     args = parser.parse_args()
 
     set_seed(42)
     rows = read_jsonl(args.train_file)
-    labeled_rows = [r for r in rows if "label" in r]
+    labeled_rows = []
+    for r in rows:
+        if "label" not in r:
+            continue
+        try:
+            label = int(r["label"])
+        except (TypeError, ValueError):
+            continue
+        if label in (0, 1):
+            labeled_rows.append(r)
 
     train_rows, val_rows = train_test_split(
         labeled_rows,
@@ -125,7 +148,11 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+    )
     total_steps = len(train_loader) * args.epochs
     scheduler = get_linear_schedule_with_warmup(
         optimizer,
@@ -141,18 +168,42 @@ def main():
         pbar = tqdm(train_loader, desc=f"epoch {epoch + 1}")
         for step, batch in enumerate(pbar):
             batch = {k: v.to(device) for k, v in batch.items()}
+            labels = batch["labels"]
+            if torch.any((labels < 0) | (labels > 1)):
+                raise RuntimeError(f"Invalid labels in batch at step {step}: {labels.tolist()}")
 
-            outputs = model(**batch)
+            model_inputs = {
+                "input_ids": batch["input_ids"],
+                "attention_mask": batch["attention_mask"],
+                "labels": batch["labels"],
+            }
+            if "token_type_ids" in batch:
+                model_inputs["token_type_ids"] = batch["token_type_ids"]
+
+            outputs = model(**model_inputs)
             loss = outputs.loss
+            logits = outputs.logits
 
-            if torch.isnan(loss) or torch.isinf(loss):
-                print(f"Skipping bad batch at step {step}: loss={loss}")
-                optimizer.zero_grad(set_to_none=True)
-                continue
+            if not torch.isfinite(loss) or not torch.isfinite(logits).all():
+                attn = batch["attention_mask"]
+                msg = (
+                    f"Non-finite detected at step {step}. "
+                    f"loss={loss.item() if torch.isfinite(loss) else 'nan/inf'}, "
+                    f"input_ids_range=({int(batch['input_ids'].min())}, {int(batch['input_ids'].max())}), "
+                    f"attn_sum_minmax=({int(attn.sum(dim=1).min())}, {int(attn.sum(dim=1).max())}), "
+                    f"labels={labels.tolist()}"
+                )
+                raise RuntimeError(msg)
 
             optimizer.zero_grad(set_to_none=True)
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            grad_norm = torch.nn.utils.clip_grad_norm_(
+                model.parameters(),
+                max_norm=1.0,
+                error_if_nonfinite=False,
+            )
+            if not torch.isfinite(grad_norm):
+                raise RuntimeError(f"Non-finite gradient norm at step {step}: {float(grad_norm)}")
             optimizer.step()
             scheduler.step()
 
