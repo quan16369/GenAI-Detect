@@ -34,10 +34,17 @@ class TextDataset(Dataset):
         for r in rows:
             if "label" not in r:
                 continue
-            text = r["text"]
+
+            text = r.get("text", "")
+            if text is None:
+                text = ""
+            text = str(text).strip()
+
             if self.normalized:
                 text = normalize_text(text)
-            self.examples.append(Example(text=text, label=int(r["label"])))
+
+            label = int(r["label"])
+            self.examples.append(Example(text=text, label=label))
 
     def __len__(self):
         return len(self.examples)
@@ -85,20 +92,22 @@ def main():
     parser.add_argument("--train_file", type=str, required=True)
     parser.add_argument("--model_dir", type=str, required=True)
     parser.add_argument("--model_name", type=str, default="microsoft/deberta-v3-base")
-    parser.add_argument("--max_length", type=int, default=512)
-    parser.add_argument("--batch_size", type=int, default=8)
-    parser.add_argument("--epochs", type=int, default=2)
-    parser.add_argument("--lr", type=float, default=2e-5)
+    parser.add_argument("--max_length", type=int, default=256)
+    parser.add_argument("--batch_size", type=int, default=4)
+    parser.add_argument("--epochs", type=int, default=1)
+    parser.add_argument("--lr", type=float, default=1e-5)
     parser.add_argument("--normalized", action="store_true")
     args = parser.parse_args()
 
     set_seed(42)
     rows = read_jsonl(args.train_file)
+    labeled_rows = [r for r in rows if "label" in r]
+
     train_rows, val_rows = train_test_split(
-        rows,
+        labeled_rows,
         test_size=0.15,
         random_state=42,
-        stratify=[int(r["label"]) for r in rows if "label" in r],
+        stratify=[int(r["label"]) for r in labeled_rows],
     )
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
@@ -110,8 +119,8 @@ def main():
     train_ds = TextDataset(train_rows, tokenizer, args.max_length, args.normalized)
     val_ds = TextDataset(val_rows, tokenizer, args.max_length, args.normalized)
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True)
-    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False)
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=2)
+    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=2)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
@@ -130,13 +139,20 @@ def main():
     for epoch in range(args.epochs):
         model.train()
         pbar = tqdm(train_loader, desc=f"epoch {epoch + 1}")
-        for batch in pbar:
+        for step, batch in enumerate(pbar):
             batch = {k: v.to(device) for k, v in batch.items()}
+
             outputs = model(**batch)
             loss = outputs.loss
 
-            optimizer.zero_grad()
+            if torch.isnan(loss) or torch.isinf(loss):
+                print(f"Skipping bad batch at step {step}: loss={loss}")
+                optimizer.zero_grad(set_to_none=True)
+                continue
+
+            optimizer.zero_grad(set_to_none=True)
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             optimizer.step()
             scheduler.step()
 
