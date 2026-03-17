@@ -4,8 +4,8 @@ import os
 import joblib
 import torch
 import torch.nn as nn
-from transformers import AutoConfig, AutoModel, AutoTokenizer
 from tqdm import tqdm
+from transformers import AutoConfig, AutoModel, AutoTokenizer
 
 from utils import abstain_score, clamp_score, normalize_text, read_jsonl, write_jsonl
 
@@ -84,7 +84,10 @@ class DebertaPredictor:
         )
         enc = {k: v.to(self.device) for k, v in enc.items()}
 
-        logits = self.model(input_ids=enc["input_ids"], attention_mask=enc["attention_mask"])
+        logits = self.model(
+            input_ids=enc["input_ids"],
+            attention_mask=enc["attention_mask"],
+        )
         prob = torch.sigmoid(logits)[0].item()
         return float(prob)
 
