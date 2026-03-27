@@ -1,5 +1,6 @@
 """Filesystem-backed Acontext subset for offline and Kaggle workflows."""
 
+from .arc_public_envs import PublicEnvironmentKnowledgeBase, find_public_knowledge
 from .client import AcontextClient
 from .integrations.arc_agi3 import ArcSkillMemory
 from .models import (
@@ -23,6 +24,7 @@ from .models import (
 __all__ = [
     "AcontextClient",
     "ArcSkillMemory",
+    "PublicEnvironmentKnowledgeBase",
     "DownloadSkillResp",
     "FileContent",
     "FileInfo",
@@ -38,4 +40,5 @@ __all__ = [
     "Session",
     "Skill",
     "SkillCatalogItem",
+    "find_public_knowledge",
 ]

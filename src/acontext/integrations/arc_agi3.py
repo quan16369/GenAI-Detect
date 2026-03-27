@@ -5,6 +5,7 @@ import re
 from dataclasses import dataclass
 from typing import Any, Callable
 
+from ..arc_public_envs import find_public_knowledge
 from ..client import AcontextClient
 from ..models import Skill
 
@@ -16,6 +17,7 @@ DistillFn = Callable[[list[dict[str, str]]], str]
 class _SkillRefs:
     shared: Skill
     game: Skill
+    verified: Skill | None = None
 
 
 class ArcSkillMemory:
@@ -86,11 +88,23 @@ none yet
         storage_dir: str | None = None,
         learning_space_name: str = "arc-agi-3",
         distill_fn: DistillFn | None = None,
+        public_summary_path: str | None = None,
+        public_environment_root: str | None = None,
+        include_verified_public: bool = True,
     ) -> None:
         self.game_id = game_id
         self.client = client or AcontextClient(storage_dir=storage_dir)
         self.learning_space_name = learning_space_name
         self.distill_fn = distill_fn
+        self.include_verified_public = include_verified_public
+        self.public_knowledge = (
+            find_public_knowledge(
+                report_path=public_summary_path,
+                environment_root=public_environment_root,
+            )
+            if include_verified_public
+            else None
+        )
         self.space = self._ensure_space()
         self.refs = self._ensure_skill_set()
 
@@ -150,7 +164,27 @@ none yet
                 "strategy.md": self.STRATEGY_TEMPLATE.format(game_id=self.game_id, level=0, actions=0),
             },
         )
-        return _SkillRefs(shared=shared, game=game)
+        verified = self._ensure_verified_skill()
+        return _SkillRefs(shared=shared, game=game, verified=verified)
+
+    def _ensure_verified_skill(self) -> Skill | None:
+        if self.public_knowledge is None:
+            return None
+        verified_md = self.public_knowledge.render_markdown(self.game_id)
+        summary = self.public_knowledge.get(self.game_id)
+        if verified_md is None or summary is None:
+            return None
+        return self._ensure_skill(
+            name=f"arc-verified-{summary.game_id}",
+            description=f"Organizer-derived verified summary for public game {summary.game_id}",
+            files={
+                "SKILL.md": (
+                    f"name: arc-verified-{summary.game_id}\n"
+                    f"description: Organizer-derived verified summary for public game {summary.game_id}\n"
+                ),
+                "verified_public.md": verified_md,
+            },
+        )
 
     def _read_skill_file(self, skill: Skill, path: str) -> str:
         resp = self.client.skills.get_file(skill_id=skill.id, file_path=path)
@@ -192,8 +226,17 @@ none yet
     def write_shared(self, content: str) -> None:
         self._write_shared_files({"cross_game_patterns.md": content})
 
+    def read_verified(self) -> str:
+        if self.refs.verified is None:
+            return ""
+        return self._read_skill_file(self.refs.verified, "verified_public.md")
+
     def build_context(self, level: int, actions_taken: int) -> str:
-        parts = [f"=== CROSS-GAME KNOWLEDGE ===\n{self.read_shared()}"]
+        parts = []
+        verified = self.read_verified()
+        if verified:
+            parts.append(f"=== VERIFIED PUBLIC KNOWLEDGE ===\n{verified}")
+        parts.append(f"=== CROSS-GAME KNOWLEDGE ===\n{self.read_shared()}")
         mechanic = self.read("game_mechanic.md")
         if "unknown" not in mechanic or level > 0:
             parts.append(f"=== GAME MECHANIC ===\n{mechanic}")
@@ -293,25 +336,32 @@ none yet
 
         updates: dict[str, str]
         if self.distill_fn is not None:
+            verified = self.read_verified()
+            user_content = (
+                f"Game={self.game_id} Level={level} Outcome={'WIN' if win else 'FAIL'}\n"
+                f"Episode={json.dumps(episode, ensure_ascii=True)}\n\n"
+            )
+            if verified:
+                user_content += f"Verified public knowledge:\n{verified}\n\n"
+            user_content += (
+                f"Current mechanic:\n{self.read('game_mechanic.md')}\n\n"
+                f"Current failures:\n{self.read('failure_log.md')}\n\n"
+                f"Current strategy:\n{self.read('strategy.md')}\n\n"
+                f"Shared patterns:\n{self.read_shared()}\n"
+            )
             prompt = [
                 {
                     "role": "system",
                     "content": (
                         "You are a skill extractor for an ARC-AGI-3 game agent. "
                         "Update the provided memory files using only concrete reusable learnings. "
+                        "Do not contradict organizer-derived verified public knowledge when it is present. "
                         "Return tags <mechanic>, <failures>, <strategy>, and optional <shared>."
                     ),
                 },
                 {
                     "role": "user",
-                    "content": (
-                        f"Game={self.game_id} Level={level} Outcome={'WIN' if win else 'FAIL'}\n"
-                        f"Episode={json.dumps(episode, ensure_ascii=True)}\n\n"
-                        f"Current mechanic:\n{self.read('game_mechanic.md')}\n\n"
-                        f"Current failures:\n{self.read('failure_log.md')}\n\n"
-                        f"Current strategy:\n{self.read('strategy.md')}\n\n"
-                        f"Shared patterns:\n{self.read_shared()}\n"
-                    ),
+                    "content": user_content,
                 },
             ]
             raw = self.distill_fn(prompt)

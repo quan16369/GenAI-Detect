@@ -63,6 +63,21 @@ skills = ArcSkillMemory(
 )
 ```
 
+If the organizer-provided public environments are available locally, `ArcSkillMemory`
+can also inject verified public knowledge:
+
+```python
+skills = ArcSkillMemory(
+    game_id=game_id,
+    storage_dir="/kaggle/working/acontext_store",
+    public_environment_root="/kaggle/input/arc-prize-2026-arc-agi-3/environment_files",
+    distill_fn=lambda messages: llm_call(messages, reasoning="medium", max_tokens=1024),
+)
+```
+
+This adds a `VERIFIED PUBLIC KNOWLEDGE` section for public games while leaving
+private games on the learned-memory path.
+
 ## Filesystem layout
 
 The local backend writes everything under `ACONTEXT_STORAGE_DIR` or the

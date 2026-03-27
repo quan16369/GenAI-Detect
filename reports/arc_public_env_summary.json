@@ -1,0 +1,2367 @@
+{
+  "generated_at": "2026-03-27T03:02:42Z",
+  "games": [
+    {
+      "game_id": "ar25-e3c63847",
+      "title": "AR25",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ar25/e3c63847/ar25.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ar25/e3c63847/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/axis_reflect",
+      "baseline_actions": [
+        17,
+        22,
+        103,
+        29,
+        29,
+        159,
+        152,
+        66
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter",
+        "edyhkfhkcf"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "khupblbrxc": "edyhkfhkcf"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "dmfgetmeus",
+        "edyhkfhkcf",
+        "ezdsyuixsn",
+        "flrtaztmgm",
+        "fmxjsieygg",
+        "gljpmsnsnx",
+        "pwbzvhvyzx",
+        "sys_click",
+        "vrfjzqaker",
+        "xnpsicjqxc",
+        "zxikvwjsyl"
+      ],
+      "line_count": 1832,
+      "has_hidden_state": false,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "bp35-0a0ad940",
+      "title": "BP35",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/bottomless_pit",
+      "baseline_actions": [
+        15,
+        72,
+        36,
+        31,
+        31,
+        48,
+        86,
+        155,
+        163
+      ],
+      "level_count": 9,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [],
+      "action_style": "unknown",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [],
+      "line_count": 4588,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "cd82-fb555c5d",
+      "title": "CD82",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/crane_dipper",
+      "baseline_actions": [
+        41,
+        8,
+        30,
+        21,
+        19,
+        17
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [],
+      "line_count": 781,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": false,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "cn04-65d47d14",
+      "title": "CN04",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/cn04/65d47d14/cn04.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/cn04/65d47d14/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/connector",
+      "baseline_actions": [
+        16,
+        54,
+        69,
+        318,
+        208,
+        114
+      ],
+      "level_count": 5,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "level_data_keys": [
+        "BackgroundColour"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "sys_click"
+      ],
+      "line_count": 681,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "exlcvhdjsf",
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `exlcvhdjsf` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "dc22-4c9bff3e",
+      "title": "DC22",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/dc22/4c9bff3e/dc22.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/dc22/4c9bff3e/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/dual_control",
+      "baseline_actions": [
+        64,
+        117,
+        59,
+        78,
+        324,
+        550
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          44
+        ],
+        [
+          64,
+          48
+        ],
+        [
+          64,
+          48
+        ],
+        [
+          64,
+          48
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "pbkvtprbnmx": "zgkdpiyghze",
+        "bqxa": "bqxa",
+        "fdvakicpimr": "pcxjvnmybet",
+        "wbzes": "wbze",
+        "nxhz_list": "nxhz"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "a",
+        "b",
+        "bqxa",
+        "bynyvtuepbt",
+        "bynyvtuepbt-object",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "ghqmfnmmgrz",
+        "gigzqgcfncq",
+        "h",
+        "ignore",
+        "itki",
+        "itki-color-jpug",
+        "jffakyxiury",
+        "jpug",
+        "nxhz",
+        "ordebgeg",
+        "path",
+        "pcxjvnmybet",
+        "pressure-plate",
+        "sys_click",
+        "vbdduyutyiw",
+        "wbze",
+        "wunhwchcpqr",
+        "zbhi",
+        "zgkdpiyghze",
+        "zmjbupyjfyb"
+      ],
+      "line_count": 2917,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "uhqbwfdkff",
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `uhqbwfdkff` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "ft09-0d8bbf25",
+      "title": "FT09",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/flip_tiles",
+      "baseline_actions": [
+        17,
+        19,
+        15,
+        21,
+        65,
+        26
+      ],
+      "level_count": 6,
+      "level_names": [
+        "THR",
+        "hxv",
+        "Fmh",
+        "oea",
+        "INW",
+        "DFx"
+      ],
+      "grid_sizes": [
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ]
+      ],
+      "level_data_keys": [
+        "cwU",
+        "elp",
+        "kCv"
+      ],
+      "available_actions": [
+        6
+      ],
+      "action_style": "click-only",
+      "clickable_tags": [
+        "gOi"
+      ],
+      "tag_aliases": {
+        "gig": "bsT",
+        "fhc": "Hkx",
+        "mou": "NTi"
+      },
+      "goal_tags": [
+        "bsT"
+      ],
+      "win_check_tags": [
+        "Hkx",
+        "NTi"
+      ],
+      "step_action_ids": [
+        0,
+        6
+      ],
+      "all_tags": [
+        "Hkx",
+        "NTi",
+        "Ycb",
+        "bsT",
+        "gOi"
+      ],
+      "line_count": 2517,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": true,
+      "uses_renderable_display": true,
+      "win_method": "cgj",
+      "notes": [
+        "Click-only game: the agent acts through ACTION6 coordinates.",
+        "Custom valid-action filtering is present; clickable sprites use tags ['gOi'].",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Step logic uses an explicit neighborhood/pattern mask, indicating local propagation effects.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `cgj` using template/goal sprites tagged ['bsT']; board checks against tags ['Hkx', 'NTi']."
+      ]
+    },
+    {
+      "game_id": "g50t-5849a774",
+      "title": "G50T",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/ghost",
+      "baseline_actions": [
+        51,
+        175,
+        86,
+        52,
+        96,
+        48,
+        67
+      ],
+      "level_count": 7,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "akfoiqesdk",
+        "gilbljmfbc",
+        "gpkhwmwioo",
+        "hgglgttaui",
+        "hxztohfdlx",
+        "kjrcloicja",
+        "medyellngi",
+        "mpreboxmgc",
+        "ovhuyqtghw",
+        "ppfvilwwnk",
+        "qftsebtxuc",
+        "rsrdfsruqh",
+        "uxqxubarib",
+        "vtwcsmdoqp"
+      ],
+      "line_count": 2839,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": false,
+      "win_method": null,
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic."
+      ]
+    },
+    {
+      "game_id": "ka59-9f096b4a",
+      "title": "KA59",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ka59/9f096b4a/ka59.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ka59/9f096b4a/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/keepaway",
+      "baseline_actions": [
+        39,
+        175,
+        86,
+        47,
+        21,
+        132,
+        326
+      ],
+      "level_count": 7,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          45,
+          45
+        ],
+        [
+          63,
+          63
+        ],
+        [
+          54,
+          54
+        ],
+        [
+          54,
+          54
+        ],
+        [
+          63,
+          63
+        ],
+        [
+          63,
+          63
+        ],
+        [
+          63,
+          63
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "Collider",
+        "divgcilurm",
+        "gobzaprasa",
+        "llnhiluenw",
+        "nnckfubbhi",
+        "rktpmjcpkt",
+        "sys_click",
+        "ucjzrlvfkb",
+        "vwjqkxkyxm",
+        "whiknkvuty",
+        "xlfuqjygey"
+      ],
+      "line_count": 1663,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "cbdaoltbck",
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `cbdaoltbck` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "lf52-271a04aa",
+      "title": "LF52",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/leap_frog",
+      "baseline_actions": [
+        24,
+        81,
+        74,
+        86,
+        118,
+        148,
+        189,
+        116,
+        150,
+        225
+      ],
+      "level_count": 10,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [],
+      "action_style": "unknown",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [],
+      "line_count": 5877,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "lp85-305b61c3",
+      "title": "LP85",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/looping_chains",
+      "baseline_actions": [
+        33,
+        22,
+        31,
+        23,
+        33,
+        34,
+        73,
+        173
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          32,
+          19
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          39,
+          31
+        ],
+        [
+          57,
+          57
+        ],
+        [
+          27,
+          32
+        ],
+        [
+          60,
+          64
+        ],
+        [
+          48,
+          36
+        ],
+        [
+          63,
+          63
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter",
+        "level_name"
+      ],
+      "available_actions": [
+        6
+      ],
+      "action_style": "click-only",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "afhycvvjg": "sys_click"
+      },
+      "goal_tags": [],
+      "win_check_tags": [
+        "goal",
+        "goal-o"
+      ],
+      "step_action_ids": [],
+      "all_tags": [
+        "bghvgbtwcb",
+        "button_10_L",
+        "button_10_R",
+        "button_11_L",
+        "button_11_R",
+        "button_12_L",
+        "button_12_R",
+        "button_13_L",
+        "button_13_R",
+        "button_14_L",
+        "button_14_R",
+        "button_15_L",
+        "button_15_R",
+        "button_16_L",
+        "button_16_R",
+        "button_17_L",
+        "button_17_R",
+        "button_18_L",
+        "button_18_R",
+        "button_19_L",
+        "button_19_R",
+        "button_1_L",
+        "button_1_R",
+        "button_20_L",
+        "button_20_R",
+        "button_21_L",
+        "button_21_R",
+        "button_22_L",
+        "button_22_R",
+        "button_23_L",
+        "button_23_R",
+        "button_24_L",
+        "button_24_R",
+        "button_25_L",
+        "button_25_R",
+        "button_26_L",
+        "button_26_R",
+        "button_27_L",
+        "button_27_R",
+        "button_2_L",
+        "button_2_R",
+        "button_3_L",
+        "button_3_R",
+        "button_4_L",
+        "button_4_R",
+        "button_5_L",
+        "button_5_R",
+        "button_6_L",
+        "button_6_R",
+        "button_7_L",
+        "button_7_R",
+        "button_8_L",
+        "button_8_R",
+        "button_9_L",
+        "button_9_R",
+        "button_A_L",
+        "button_A_R",
+        "button_B_L",
+        "button_B_R",
+        "button_C_L",
+        "button_C_R",
+        "button_D_L",
+        "button_D_R",
+        "button_E_L",
+        "button_E_R",
+        "button_F_L",
+        "button_F_R",
+        "button_G_L",
+        "button_G_R",
+        "button_H_L",
+        "button_H_R",
+        "button_I_L",
+        "button_I_R",
+        "button_J_L",
+        "button_J_R",
+        "button_K_L",
+        "button_K_R",
+        "button_L_L",
+        "button_L_R",
+        "button_M_L",
+        "button_M_R",
+        "fdgmtkfrxl",
+        "goal",
+        "goal-o",
+        "sys_click",
+        "tile"
+      ],
+      "line_count": 21429,
+      "has_hidden_state": false,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "khartslnwa",
+      "notes": [
+        "Click-only game: the agent acts through ACTION6 coordinates.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `khartslnwa` using board checks against tags ['goal', 'goal-o']."
+      ]
+    },
+    {
+      "game_id": "ls20-9607627b",
+      "title": "LS20",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/locksmith",
+      "baseline_actions": [
+        21,
+        123,
+        39,
+        92,
+        54,
+        108,
+        109
+      ],
+      "level_count": 7,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "Fog",
+        "GoalColor",
+        "GoalRotation",
+        "StartColor",
+        "StartRotation",
+        "StartShape",
+        "StepCounter",
+        "StepsDecrement",
+        "kvynsvxbpi"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "gudziatsk": "sfqyzhzkij",
+        "htkmubhry": "wgmbtyhvbc",
+        "htkmubhry_2": "eqatonpohu",
+        "tsynhckng": "ghizzeqtoh",
+        "srgbthxut": "kvynsvxbpi",
+        "plrpelhym": "rjlbuycveu"
+      },
+      "goal_tags": [],
+      "win_check_tags": [
+        "hoswmpiqkw",
+        "vjotnebuqo"
+      ],
+      "step_action_ids": [],
+      "all_tags": [
+        "eqatonpohu",
+        "gbvqrjtaqo",
+        "ghizzeqtoh",
+        "hoswmpiqkw",
+        "ihdgageizm",
+        "kvynsvxbpi",
+        "npxgalaybz",
+        "rhsxkxzdjz",
+        "rjlbuycveu",
+        "sfqyzhzkij",
+        "soyhouuebz",
+        "ttfwljgohq",
+        "vfkkzdgxzx",
+        "vjotnebuqo",
+        "wgmbtyhvbc",
+        "xfmluydglp"
+      ],
+      "line_count": 2042,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "pbznecvnfr",
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `pbznecvnfr` using board checks against tags ['hoswmpiqkw', 'vjotnebuqo']."
+      ]
+    },
+    {
+      "game_id": "m0r0-dadda488",
+      "title": "M0R0",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/m0r0/dadda488/m0r0.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/m0r0/dadda488/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/mirrored",
+      "baseline_actions": [
+        30,
+        209,
+        83,
+        86,
+        436,
+        126
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "level_data_keys": [
+        "npwxa"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "jggua",
+        "nhiae",
+        "pxwnx",
+        "sys_click",
+        "wyiex"
+      ],
+      "line_count": 908,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "r11l-aa269680",
+      "title": "R11L",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/r11l/aa269680/r11l.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/r11l/aa269680/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/robot_legs",
+      "baseline_actions": [
+        7,
+        28,
+        30,
+        20,
+        37,
+        45
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [
+        6
+      ],
+      "action_style": "click-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "sys_click"
+      ],
+      "line_count": 1822,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": false,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Click-only game: the agent acts through ACTION6 coordinates.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "re86-4e57566e",
+      "title": "RE86",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/re86/4e57566e/re86.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/re86/4e57566e/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/reticle",
+      "baseline_actions": [
+        28,
+        38,
+        198,
+        57,
+        84,
+        117,
+        328,
+        221
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "ldkpywfara",
+        "miqpqafylc",
+        "nogegkgqgd",
+        "ozhohpbjxz",
+        "vfaeucgcyr",
+        "vzuwsebntu",
+        "yojcsdeysc"
+      ],
+      "line_count": 2141,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "cdjxpfqest",
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `cdjxpfqest` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "s5i5-a48e4b1d",
+      "title": "S5I5",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/s5i5/a48e4b1d/s5i5.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/s5i5/a48e4b1d/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/sliders",
+      "baseline_actions": [
+        19,
+        57,
+        85,
+        203,
+        82,
+        30,
+        76,
+        56
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "Children",
+        "StepCounter"
+      ],
+      "available_actions": [
+        6
+      ],
+      "action_style": "click-only",
+      "clickable_tags": [
+        "gdgcpukdrl",
+        "myzmclysbl"
+      ],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "agujdcrunq",
+        "cpdhnkdobh",
+        "gdgcpukdrl",
+        "myzmclysbl",
+        "zylvdxoiuq"
+      ],
+      "line_count": 2252,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "ulzimrggno",
+      "notes": [
+        "Click-only game: the agent acts through ACTION6 coordinates.",
+        "Custom valid-action filtering is present; clickable sprites use tags ['gdgcpukdrl', 'myzmclysbl'].",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `ulzimrggno` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "sb26-7fbdac44",
+      "title": "SB26",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/subroutine",
+      "baseline_actions": [
+        18,
+        16,
+        15,
+        15,
+        31,
+        24,
+        17,
+        17
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [],
+      "available_actions": [
+        5,
+        6,
+        7
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [
+        "lngftsryyw",
+        "susublrply"
+      ],
+      "tag_aliases": {
+        "qaagahahj": "pkpgflvjel",
+        "dkouqqads": "lngftsryyw",
+        "dewwplfix": "susublrply"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "lngftsryyw",
+        "pkpgflvjel",
+        "susublrply",
+        "sys_click"
+      ],
+      "line_count": 1152,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Custom valid-action filtering is present; clickable sprites use tags ['lngftsryyw', 'susublrply'].",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "sc25-f9b21a2f",
+      "title": "SC25",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sc25/f9b21a2f/sc25.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sc25/f9b21a2f/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spellcaster",
+      "baseline_actions": [
+        39,
+        5,
+        32,
+        33,
+        66,
+        41
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "ozhskarnd",
+        "sykpecmoq",
+        "wdsxxkugj"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "jqwvpaczd",
+        "sys_click"
+      ],
+      "line_count": 2716,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": false,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": true,
+      "uses_renderable_display": false,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Step logic uses an explicit neighborhood/pattern mask, indicating local propagation effects.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic."
+      ]
+    },
+    {
+      "game_id": "sk48-41055498",
+      "title": "SK48",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sk48/41055498/sk48.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sk48/41055498/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/skewer",
+      "baseline_actions": [
+        15,
+        32,
+        35,
+        113,
+        304,
+        42,
+        63,
+        92
+      ],
+      "level_count": 8,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "grouped_pauses",
+        "lit_extension"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "vbelzuaian": "elmjchdqcn",
+        "lqwkgffeb": "jtteddgeyl"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "elmjchdqcn",
+        "epdquznwmq",
+        "irkeobngyh",
+        "jtteddgeyl",
+        "mkgqjopcjn",
+        "qtjqovumxf"
+      ],
+      "line_count": 988,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "sp80-0ee2d095",
+      "title": "SP80",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sp80/0ee2d095/sp80.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/sp80/0ee2d095/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/spill",
+      "baseline_actions": [
+        11,
+        18,
+        17,
+        172,
+        102,
+        152
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          16,
+          16
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "level_data_keys": [
+        "rotation",
+        "steps"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "action_style": "hybrid",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "hfjpeygkxy",
+        "ksmzdcblcz",
+        "nkrtlkykwe",
+        "syaipsfndp",
+        "sys_click",
+        "uzunfxpwmd",
+        "xsrqllccpx"
+      ],
+      "line_count": 874,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Hybrid action space: both button actions and coordinate clicks are available.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "su15-4c352900",
+      "title": "SU15",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/su15/4c352900/su15.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/su15/4c352900/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/suika_vacuum",
+      "baseline_actions": [
+        18,
+        28,
+        50,
+        151,
+        18,
+        31,
+        50,
+        179,
+        41
+      ],
+      "level_count": 9,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "goal",
+        "steps"
+      ],
+      "available_actions": [
+        6,
+        7
+      ],
+      "action_style": "custom",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "koprtgesg": "key"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "enemy",
+        "enemy2",
+        "enemy3",
+        "fruit",
+        "goal",
+        "hint",
+        "key"
+      ],
+      "line_count": 2153,
+      "has_hidden_state": false,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "tn36-ab4f63cc",
+      "title": "TN36",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tn36/ab4f63cc/tn36.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tn36/ab4f63cc/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/true_naming",
+      "baseline_actions": [
+        23,
+        22,
+        26,
+        37,
+        25,
+        56,
+        61
+      ],
+      "level_count": 7,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "Positions",
+        "Programs",
+        "Reset",
+        "Rotations",
+        "Scales"
+      ],
+      "available_actions": [
+        6
+      ],
+      "action_style": "click-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "annjcsdtyc",
+        "baxznkbwix",
+        "ccjcukzyce",
+        "clnkuqefvl",
+        "egcefpppze",
+        "ilkhmcqzxr",
+        "mgmykqfuye",
+        "mjbdqbhcpj",
+        "qgqvgxjtau",
+        "rlqfpkqktk",
+        "sys_click",
+        "tkgkshggjr",
+        "trvxlvpbdv",
+        "udwswsnybp",
+        "yikencmwll",
+        "ylbysintoa",
+        "yssamcbruq",
+        "zdzgatsoyb"
+      ],
+      "line_count": 2624,
+      "has_hidden_state": false,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": false,
+      "win_method": null,
+      "notes": [
+        "Click-only game: the agent acts through ACTION6 coordinates."
+      ]
+    },
+    {
+      "game_id": "tr87-cd924810",
+      "title": "TR87",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/translate",
+      "baseline_actions": [
+        37,
+        30,
+        39,
+        29,
+        63,
+        119
+      ],
+      "level_count": 6,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "alter_rules",
+        "double_translation",
+        "tree_translation"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {
+        "zdwrfusvmx": "nxkictbbvzt"
+      },
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "gyrdjxybtcm",
+        "nxkictbbvzt",
+        "tjaqvwdgkxe"
+      ],
+      "line_count": 1102,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": true,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": null,
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Core interaction code remaps sprite colors, suggesting state is encoded by color cycles.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget."
+      ]
+    },
+    {
+      "game_id": "tu93-2b534c15",
+      "title": "TU93",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tu93/2b534c15/tu93.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/tu93/2b534c15/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/stealth",
+      "baseline_actions": [
+        19,
+        15,
+        34,
+        42,
+        76,
+        91,
+        47,
+        23,
+        31
+      ],
+      "level_count": 9,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          39,
+          38
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          51,
+          51
+        ],
+        [
+          49,
+          49
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          42,
+          42
+        ],
+        [
+          51,
+          51
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "albwnmiahg",
+        "natiyqayts",
+        "vhlesexlqd",
+        "vllvfeggte",
+        "xboyuzuyxv",
+        "zzuxulcort"
+      ],
+      "line_count": 1251,
+      "has_hidden_state": false,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "vpaafwwtxk",
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `vpaafwwtxk` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "vc33-9851e02b",
+      "title": "VC33",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/vc33/9851e02b/vc33.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/vc33/9851e02b/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/valvecheck",
+      "baseline_actions": [
+        6,
+        13,
+        31,
+        59,
+        92,
+        24,
+        82
+      ],
+      "level_count": 7,
+      "level_names": [
+        "Level 1",
+        "Level 2",
+        "Level 3",
+        "Level 4",
+        "Level 5",
+        "Level 6",
+        "Level 7"
+      ],
+      "grid_sizes": [
+        [
+          32,
+          32
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          52,
+          52
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          48,
+          48
+        ]
+      ],
+      "level_data_keys": [
+        "RoA",
+        "TiD"
+      ],
+      "available_actions": [],
+      "action_style": "unknown",
+      "clickable_tags": [
+        "ACQ"
+      ],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [
+        6
+      ],
+      "all_tags": [
+        "ACQ",
+        "HQB",
+        "UXg",
+        "WuO",
+        "ZGd",
+        "fZK",
+        "rDn",
+        "rlV",
+        "zHk"
+      ],
+      "line_count": 2137,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": true,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "gug",
+      "notes": [
+        "Custom valid-action filtering is present; clickable sprites use tags ['ACQ'].",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `gug` using custom win logic."
+      ]
+    },
+    {
+      "game_id": "wa30-ee6fef47",
+      "title": "WA30",
+      "source_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py",
+      "metadata_path": "/home/quan/pan2026_detector/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/metadata.json",
+      "game_dir_url": "https://github.com/arcprize/ARC-AGI-3-Games-Devless/tree/main/games/warehouse",
+      "baseline_actions": [
+        125,
+        58,
+        259,
+        113,
+        499,
+        58,
+        186,
+        134,
+        132
+      ],
+      "level_count": 9,
+      "level_names": [],
+      "grid_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "level_data_keys": [
+        "StepCounter"
+      ],
+      "available_actions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "action_style": "button-only",
+      "clickable_tags": [],
+      "tag_aliases": {},
+      "goal_tags": [],
+      "win_check_tags": [],
+      "step_action_ids": [],
+      "all_tags": [
+        "bnzklblgdk",
+        "debyzcmtnr",
+        "fsjjayjoeg",
+        "geezpjgiyd",
+        "kdweefinfi",
+        "wbmdvjhthc",
+        "ysysltqlke",
+        "zqxwgacnue"
+      ],
+      "line_count": 1237,
+      "has_hidden_state": true,
+      "has_custom_valid_actions": false,
+      "has_next_level": true,
+      "has_lose": true,
+      "uses_color_remap": false,
+      "uses_neighbor_pattern": false,
+      "uses_renderable_display": true,
+      "win_method": "ymzfopzgbq",
+      "notes": [
+        "Button-only game: actions appear to use ACTION1-ACTION5 without coordinate clicks.",
+        "Hidden state plus lose condition suggests a timer, budget, or countdown mechanic.",
+        "Uses a RenderableUserDisplay overlay, likely exposing progress or remaining budget.",
+        "Winning is checked by `ymzfopzgbq` using custom win logic."
+      ]
+    }
+  ]
+}
