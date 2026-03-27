@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acontext"
+version = "0.1.20.local1"
+description = "Filesystem-backed Acontext-style skill memory for offline and Kaggle workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+  {name = "OpenAI Codex"}
+]
+keywords = ["acontext", "skill-memory", "kaggle", "arc-agi", "offline"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/memodb-io/Acontext"
+Repository = "https://github.com/memodb-io/Acontext"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
